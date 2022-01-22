@@ -34,3 +34,9 @@ docker-compose down
 docker images
 docker ps -a
 ```
+
+
+
+```
+docker build -t boot:v1 .
+```
