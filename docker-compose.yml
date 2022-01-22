@@ -1,0 +1,18 @@
+version : '3'
+services:
+  boot-project:
+    environment:
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+      LC_ALL: en_US.UTF-8
+    build: .
+    ports:
+      - "8000:8000"
+    links: ["redis-server:redis"]
+    
+  redis-server:
+    image: redis:latest
+    hostname: "redis"
+    ports:
+      - "6379:6379"
